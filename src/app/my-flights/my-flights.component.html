@@ -1,0 +1,34 @@
+<p-table [value]="flights" [scrollable]="true" scrollHeight="200px" [autoLayout]="true" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>FlightNumer</th>
+            <th>FromWhichState</th>
+            <th>ToWhich</th>
+            <th>arrivalPoint</th>
+            <th>staus</th>
+            <th>rangenumber</th>
+            <th>statusof</th>
+            <th>rangenumberof</th>
+            <th>Business</th>
+            <th>Economy</th>
+            <th>BusinessPlus</th>
+            <th>EconomyPlus</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-flight>
+        <tr>
+            <td>{{flight.flightNumber}}</td>
+            <td>{{flight.origin}}</td>
+            <td>{{flight.destination}}</td>
+            <td>{{flight.arrival}}</td>
+            <td>{{flight.status}}</td>
+            <td>{{flight.rangenumber}}</td>
+            <td>{{flight.statusOf}}</td>
+            <td>{{flight.rangenumberOf}}</td>
+            <td>{{flight.Business}}</td>
+            <td>{{flight.Economy}}</td>
+            <td>{{flight.BusinessPlus}}</td>
+            <td>{{flight.EconomyPlus}}</td>
+        </tr>
+    </ng-template>
+</p-table>

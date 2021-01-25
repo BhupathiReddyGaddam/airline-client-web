@@ -32,3 +32,51 @@
         </tr>
     </ng-template>
 </p-table>
+<button class="sila icon-la-warehouse" (click)="op.toggle($event)">label</button>
+<p-overlayPanel #op appendTo="body">
+  <div class="">
+    overlaypanel content
+  </div>
+</p-overlayPanel>
+
+<h2>PrimeNG dropdown append to body scroll issue</h2>
+<p>Scroll to the bottom of the page to see the dropdowns. It's a problem that you have to choose between the following:</p>
+<ul>
+  <li>having the open dropdown scrolling correctly with page but cut (left example)</li>
+  <li>having the open dropdown whole but not scrolling correctly with (right example)</li>
+</ul>
+
+<div class="page">
+  Page
+
+  <div class="container">
+    Container
+
+    <p class="lorem-ipsum">
+    What is Lorem Ipsum?
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <div class="examples">
+      <div class="example">
+        <p-dropdown
+          [options]="cities"
+          [(ngModel)]="selectedCity"
+          optionLabel="name"
+        >
+        </p-dropdown>
+      </div>
+      <div class="example">
+        <p-dropdown
+          [options]="cities"
+          [(ngModel)]="selectedCity"
+          optionLabel="name"
+          [appendTo]="'body'"
+        >
+        </p-dropdown>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Please fix the dropdown with "[appendTo]="'body'"" to have an option to scroll correctly when it is open</p>
